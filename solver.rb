@@ -14,5 +14,4 @@ class Solver
 
     number.to_s unless (number % 3).zero? || (number % 5).zero?
   end
-  
 end
