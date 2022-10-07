@@ -1,11 +1,11 @@
-require 'solver'
+require_relative '../solver'
 
 describe Solver do
   context 'Correct argument' do
     it 'reverse a string' do
-      mock = instance_double(solver)
-      expects(mock).to receive('olleh')
-      mock.reverse('hello')
+      tst = Solver.new
+      expect(tst.reverse('hello')).to eq('olleh')
+    
     end
   end
 end
