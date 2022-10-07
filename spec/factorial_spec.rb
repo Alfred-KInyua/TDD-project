@@ -1,7 +1,9 @@
+require_relative '../solver'
+
 describe 'TDD factorial method' do
   it 'checks the existance of the factorial method' do
     mock = instance_double(Solver)
-    expect(mock).to recive(:factorial)
+    expect(mock).to receive(:factorial)
     mock.factorial(5)
   end
 
@@ -27,3 +29,5 @@ describe 'TDD factorial method' do
 
   it 'if input is big number' do
     expect(Solver.new.factorial(14)).to eq 87_178_291_200
+  end
+end
